@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hantera arrays</title>
+    <style>
+        #container {
+            display: flex;
+            width:100vw;
+            justify-content: space-around;
+        }
+
+        aside {
+            max-width: 300px;
+        }
+
+        h1,h2 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p,ol {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 130%; max-width:600px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        img {
+            width:300px;
+            height:300px;
+        }
+
+    </style>
+</head>
+<body>
+   <div id="container"> <main>
+<h1>Examinerande del i tillämpad programmering (E)</h1>
+
+<p>Du skall i denna uppgift bearbeta en Array. Innehållet i arrayen gradeArray består av examensresultat från en klass som tagit stundenten. Din uppgift är att bearbeta data och räkna ut betygssummor. Uppgifterna skall skrivas ut i DOM (alltså på själva hemsidan under taggen hr som ni ser i källkoden för detta dokument på rad 62).</p>
+<p>Tänk på att använda dig av de olika verktyg som vi gått igenom. Du kommer kunna lösa uppgiften med hjälp av någon loop.</p>
+<p>Du behöver förstå din kod och förklara hur tänkt när du utvecklade koden. Det räcker alltså inte bara att skicka in färdig kod utan du kan komma att behöva presentera/redogöra för din kod.</p>
+
+<h2>Uppgiftens delar</h2>
+<ol>
+    <li>Skapa ett script som räknar antalet betygssummor som finns i Arrayen</li><li>Skapa ett skript som beräknar totalsumman av alla betygssummor</li>
+<li>Utveckla skriptet så att det förutom totalsumman även beräknar medeltalet för klassens utgångsbetyg</li>
+<li><strong>Fördjupning - Är du klar med de övriga delarna?</strong></li>
+<ol><li>Skriv ut allt innehåll i gradeArray till en tabell där du markerar allt med 15 och över med bakgrundsfärg grön.
+</li>
+<li>Lägg till så att under 15 markeras som gul.
+    <li>Gör om arrayen till JavaScript objekt där du även hittar på namn på eleverna så du får en koppling mellan betygsresultat och person</li>
+</li></ol>
+</ol></main>
+
+<aside><table border="1">
+    <tbody>
+        <tr>
+            <td>Elevnamn</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>15.3</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>12.4</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>14.33</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>18.9</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>20.2</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>20.3</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>11.3</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>18.9</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>20.2</td>
+        </tr>
+        <tr>
+            <td>Elevnamn</td>
+            <td>20.3</td></tr><tr><td>Elevnamn</td><td>13.54</td></tr><tr><td>Elevnamn</td><td>19.05</td></tr><tr><td>Elevnamn</td><td>19.3</td></tr><tr><td>Elevnamn</td><td>12.3</td></tr><tr><td>Elevnamn</td><td>16.7</td></tr><tr><td>Elevnamn</td><td>18.3</td></tr><tr><td>Elevnamn</td><td>13.4</td></tr><tr><td>Elevnamn</td><td>12.3</td></tr><tr><td>Elevnamn</td><td>11.3</td></tr><tr><td>Elevnamn</td><td>13.54</td></tr><tr><td>Elevnamn</td><td>19.05</td></tr><tr><td>Elevnamn</td><td>19.3</td></tr><tr><td>Elevnamn</td><td>12.3</td></tr><tr><td>Elevnamn</td><td>16.7</td></tr><tr><td>Elevnamn</td><td>18.3</td></tr><tr><td>Elevnamn</td><td>13.4</td></tr><tr><td>Elevnamn</td><td>12.3</td></tr></tbody></table></aside>
+
+</div>
+
+<hr><!-- NEDANFÖR DENNA RAD KAN DU SJÄLV SKRIVA TILL HTML SOM DU BEHÖVER FÖR ATT REDOVISA DINA SIFFROR -->
+<h1>Här skall du skriva ut din bearbetning, betygssumma etc</h1>
+
+
+<div id="resultat">Antalet betyg</div>
+<div id="totalsumma">Den totala summan</div>
+<div id="medel">medel</div>
+
+
+
+<script>
+    /* Din JavaScript kod skall du skriva nedan. Du kan antingen dela upp koden i 3 olika delar eller kombinera ihop den i samma. Huvudsaken är att du kan redogöra för den kod som du använt i uppgiften. Du kan komma behöva presentera din kod för mig. */
+
+let gradeArray = [16,20,21,15.3,12.4,14.33,15,18.9,20.2,20.3,16.0,11.3,18.9,20.2,20.3,13.54,19.05,19.3,12.3,16.7,18.3,13.4,12.3,11.3,13.54,19.05,19.3,12.3,16.7,18.3,13.4,12.3]
+
+alert(gradeArray.length);
+
+document.querySelector().innerHTML
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
