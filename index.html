@@ -33,6 +33,15 @@
             height:300px;
         }
 
+        .green {
+            background-color: darkgreen;
+
+        }
+
+        .yellow {
+            background-color: darkgoldenrod;
+        }
+
     </style>
 </head>
 <body>
@@ -127,6 +136,13 @@
 <div id="totalsumma">Den totala summan</div>
 <div id="medel">medel</div>
 
+<table id="betygstabell" border="1"> 
+    <tbody>
+
+
+    </tbody>
+</table>
+
 
 
 <script>
@@ -149,20 +165,44 @@ for (i=0;i < antal; i++) {
     Din JavaScript kod skall du skriva nedan. Du kan antingen dela upp koden i 3 olika delar eller kombinera ihop den i samma. Huvudsaken är att du kan redogöra för den kod som du använt i uppgiften. Du kan komma behöva presentera din kod för mig. */
 
 let gradeArray = [16,20,21,15.3,12.4,14.33,15,18.9,20.2,20.3,16.0,11.3,18.9,20.2,20.3,13.54,19.05,19.3,12.3,16.7,18.3,13.4,12.3,11.3,13.54,19.05,19.3,12.3,16.7,18.3,13.4,12.3]
-let summa = [16,20,21,15.3,12.4,14.33,15,18.9,20.2,20.3,16.0,11.3,18.9,20.2,20.3,13.54,19.05,19.3,12.3,16.7,18.3,13.4,12.3,11.3,13.54,19.05,19.3,12.3,16.7,18.3,13.4,12.3]
 
 let total = 0;
 for(let i = 0; i < gradeArray.length; i++) {
     total += gradeArray[i];
 }
 
-let med = total / gradeArray
+let med = total / gradeArray.length
 
 document.querySelector("#resultat").innerHTML += gradeArray.length
-document.querySelector("#totalsumma").innerHTML += sum
+document.querySelector("#totalsumma").innerHTML += total
 document.querySelector("#medel").innerHTML += med
 
+let tabell = document.querySelector("#betygstabell tbody")
 
+let nameArray = ["a","b","c","d","E","f","g","h","i","j","a","b","c","d","E","f","g","h","i","j","a","b","c","d","E","f","g","h","i","j","a","b"]
+
+let objektArray = []
+
+for(let i = 0; i < gradeArray.length; i++) {
+    objektArray.push({namn:nameArray[i], betyg:gradeArray[i]})
+
+}
+
+for(let i = 0; i < objektArray.length; i++) {
+    
+    
+    tabell.innerHTML +="<tr class='"+bakgrundFarg(objektArray[i].betyg)+"'><td>"+objektArray[i].namn+"</td><td>" +objektArray[i].betyg+"</td></tr>"
+}
+
+function bakgrundFarg(betyg){
+	let farg = '';
+	if(betyg < 15){
+		farg = 'yellow';
+	} else if(betyg >= 15){
+		farg = 'green';
+	}
+	return farg;
+}
 </script>
 
 </body>
